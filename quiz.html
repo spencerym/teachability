@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adhd.html">ADHD Crash Course</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="disabilities.html">Other Disabilities</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Test Your Knowledge</h2>
+        <form id="quizForm">
+            <label for="question1">1. What does ADHD stand for?</label>
+            <input type="text" id="question1" name="question1"><br><br>
+            <!-- <label for="question2">2. Name one effective strategy for managing ADHD in the classroom.</label>
+            <input type="text" id="question2" name="question2"><br><br>
+            <label for="question3">3. What is one symptom of dyslexia?</label>
+            <input type="text" id="question3" name="question3"><br><br>
+            <label for="question4">4. What is a common challenge for individuals with dyspraxia?</label>
+            <input type="text" id="question4" name="question4"><br><br> -->
+            <input type="button" value="Submit" onclick="checkAnswers()">
+        </form>
+        <div id="result"></div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

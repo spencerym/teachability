@@ -1,52 +1,23 @@
 function checkAnswers() {
-    const question1 = document.getElementById('question1').value.trim().toLowerCase();
-    // const question2 = document.getElementById('question2').value.trim().toLowerCase();
-    // const question3 = document.getElementById('question3').value.trim().toLowerCase();
-    // const question4 = document.getElementById('question4').value.trim().toLowerCase();
+    const answers = {
+        question1: "inattentive and hyperactive-impulsive",
+        question2: "hyperactive-impulsive",
+        question3: "provide a list of steps or approaches to tasks",
+        question4: "executive dysfunction is a challenge in managing one's thoughts and actions, leading to impulsivity and difficulty in focusing and organizing tasks",
+        question5: "speech-to-text programs like Dragon Dictation or Google Docs",
+        question6: "use private cues like a sticky note or shoulder tap, offer regular breaks, and provide a quiet space for relaxation"
+    };
 
     let score = 0;
-    let resultText = '';
+    const totalQuestions = 6;
 
-    // Check answers
-    if (question1 === 'attention deficit hyperactivity disorder') {
-        score += 1;
+    for (let i = 1; i <= totalQuestions; i++) {
+        const userAnswer = document.getElementById(`question${i}`).value.trim().toLowerCase();
+        if (userAnswer.includes(answers[`question${i}`])) {
+            score += 1;
+        }
     }
 
-    // if (question2.includes('clear and concise instructions') || 
-    //     question2.includes('regular breaks') || 
-    //     question2.includes('structured environment') || 
-    //     question2.includes('positive reinforcement') ||
-    //     question2.includes('movement into lessons') ||
-    //     question2.includes('choices to increase engagement')) {
-    //     score += 1;
-    // }
-
-    // if (question3.includes('reading fluency') ||
-    //     question3.includes('decoding') ||
-    //     question3.includes('comprehension') ||
-    //     question3.includes('recall') ||
-    //     question3.includes('writing')) {
-    //     score += 1;
-    // }
-
-    // if (question4.includes('physical coordination') ||
-    //     question4.includes('fine motor skills')) {
-    //     score += 1;
-    // }
-
-    // Display result
-    if (score === 4) {
-        resultText = 'Excellent! You got all answers correct!';
-    } else if (score === 3) {
-        resultText = 'Great job! You got three answers correct!';
-    } else if (score === 2) {
-        resultText = 'Good effort! You got two answers correct.';
-    } else if (score === 1) {
-        // resultText = 'Keep trying! You got one answer correct.';
-        resultText = "Excellent!"
-    } else {
-        resultText = 'Review the material and try again.';
-    }
-
+    const resultText = `You got ${score} out of ${totalQuestions} correct. ${score === totalQuestions ? "Excellent work!" : "Keep reviewing the material and try again!"}`;
     document.getElementById('result').innerText = resultText;
 }

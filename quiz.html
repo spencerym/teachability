@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/UpdatedLogo.png" alt="Teachability Logo" class="logo">
+            </a>
+        </div>
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">ADHD Crash Course</a>
+                    <div class="dropdown-content">
+                        <a href="adhd_understanding.html">Understanding ADHD</a>
+                        <a href="adhd_challenges.html">Common Challenges</a>
+                        <a href="adhd_tips.html">Tips for Teachers</a>
+                        <a href="adhd_resources.html">Useful Resources</a>
+                    </div>
+                </li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <!-- <li><a href="disabilities.html">Other Conditions</a></li> -->
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Test Your Knowledge</h2>
+        <form id="quizForm">
+            <!-- Multiple Choice Question 1 -->
+            <label for="question1">1. What are the two main types of ADHD?</label><br>
+            <input type="radio" id="q1a" name="question1" value="a"> Inattentive and Hyperactive-Impulsive<br>
+            <input type="radio" id="q1b" name="question1" value="b"> Attentive and Impulsive<br>
+            <input type="radio" id="q1c" name="question1" value="c"> Impulsive and Inattentive<br><br>
+
+            <!-- Multiple Choice Question 2 -->
+            <label for="question2">2. Which of the following is a common challenge faced by students with ADHD?</label><br>
+            <input type="radio" id="q2a" name="question2" value="a"> Easily following instructions<br>
+            <input type="radio" id="q2b" name="question2" value="b"> Maintaining focus on tasks<br>
+            <input type="radio" id="q2c" name="question2" value="c"> Completing tasks ahead of schedule<br><br>
+
+            <!-- Multiple Choice Question 3 -->
+            <label for="question3">3. What is a recommended strategy for helping students with ADHD in math?</label><br>
+            <input type="radio" id="q3a" name="question3" value="a"> Give timed fact tests<br>
+            <input type="radio" id="q3b" name="question3" value="b"> Provide a list of steps or approaches<br>
+            <input type="radio" id="q3c" name="question3" value="c"> Avoid giving students extra time for exams<br><br>
+
+            <!-- Multiple Choice Question 4 -->
+            <label for="question4">4. What is executive dysfunction?</label><br>
+            <input type="radio" id="q4a" name="question4" value="a"> The ability to manage one's thoughts and actions<br>
+            <input type="radio" id="q4b" name="question4" value="b"> Difficulty in controlling impulses<br>
+            <input type="radio" id="q4c" name="question4" value="c"> A challenge in managing one’s thoughts and actions, leading to impulsivity and difficulty in focusing<br><br>
+
+            <!-- Multiple Choice Question 5 -->
+            <label for="question5">5. How can audiobooks benefit students with ADHD?</label><br>
+            <input type="radio" id="q5a" name="question5" value="a"> By providing a visual learning tool<br>
+            <input type="radio" id="q5b" name="question5" value="b"> By providing an alternative to reading that may improve focus and comprehension<br>
+            <input type="radio" id="q5c" name="question5" value="c"> By helping students write more effectively<br><br>
+
+            <!-- Multiple Choice Question 6 -->
+            <label for="question6">6. Which of the following tools can help students with ADHD improve their writing process?</label><br>
+            <input type="radio" id="q6a" name="question6" value="a"> Flashcards<br>
+            <input type="radio" id="q6b" name="question6" value="b"> Speech-to-text programs like Dragon Dictation or Google Docs<br>
+            <input type="radio" id="q6c" name="question6" value="c"> Timers<br><br>
+
+            <input type="button" value="Submit" onclick="checkAnswers()">
+        </form>
+        <div id="result"></div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
